@@ -1,4 +1,4 @@
-##Ascential - Technical Test For Java Engineer
+Ascential - Technical Test For Java Engineer
 
 You have been provided with 3 classes as a basis for this technical test.
 -	CustomNumberEntity.
@@ -8,10 +8,10 @@ You have been provided with 3 classes as a basis for this technical test.
 -	NumberFinder
         -	An interface to be implemented
 
-####Objective: 
+Objective: 
 Write a class, which implements NumberFinder, to search a list of type CustomNumberEntity for a given int value. The search should be completed by the fastest means possible.
 
-####Constraints:
+Constraints:
 -	Your class MUST implement the provided NumberFinder interface.
 -	The list of CustomNumberEntity values should be read from a Json file. An example Json structure is given on the next page.
 -	The contains method of your implementation MUST use the provided FasterComparator.compare method to compare the int value with each CustomNumberEntity. How you do this in the fastest possible time is the key. FastestComparator.compare cannot be modified and no other comparison method should be used (hashing, indexes etc)
@@ -19,7 +19,7 @@ Write a class, which implements NumberFinder, to search a list of type CustomNum
 -	You MUST include Junit tests for running your code.
 -	Write your code using java 7 or 8
 
-####Solution
+Solution
 
 `NumberFinderImpl.java`
 <br /><br /><br />
@@ -45,7 +45,7 @@ Two Ways were looked at to searching a `list` of type `CustomNumberEntity` for a
     - If any of the Threads return 0, number is in the list.
     - `FastestComparator.compare` takes about 10 seconds using this approach.
     
-####Conclusion
+Conclusion
 
 Although an important factor of how fast possible the compare could be done, I seen the Multi Threading approach as a better option.
 In a program a sleep is generally called for a reason and so just calling an interrupt may cause conflict.
